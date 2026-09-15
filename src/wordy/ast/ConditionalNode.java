@@ -96,7 +96,7 @@ public class ConditionalNode extends StatementNode {
 
     @Override
     public void compile(PrintWriter out) {
-        out.print("if(");
+        out.print("if (");
         lhs.compile(out);
 
         String symbol = switch(operator) {
@@ -109,7 +109,8 @@ public class ConditionalNode extends StatementNode {
         rhs.compile(out);
         out.print(") ");
         ifTrue.compile(out);
-        out.print(" else ");
+        out.println("");
+        out.print("else ");
         ifFalse.compile(out);
     }
 }

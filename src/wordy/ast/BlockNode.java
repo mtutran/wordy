@@ -73,11 +73,11 @@ public class BlockNode extends StatementNode {
 
     @Override
     public void compile(PrintWriter out) {
-        out.print("{ ");
+        out.println("{ ");
 
         for (StatementNode statement : statements) {
             statement.compile(out);
-            out.print(" ");
+            out.println("");
         }
         
         out.print("}");
